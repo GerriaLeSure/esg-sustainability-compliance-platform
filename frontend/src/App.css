@@ -1,0 +1,205 @@
+.app {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', roboto, sans-serif;
+}
+
+.header {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+  padding: 2rem 0;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  margin: 0.5rem 0 0 0;
+  opacity: 0.9;
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  background: white;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  gap: 1rem;
+}
+
+.nav-button {
+  padding: 0.75rem 1.5rem;
+  border: 2px solid #10b981;
+  background: white;
+  color: #10b981;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.nav-button:hover {
+  background: #f0fdf4;
+}
+
+.nav-button.active {
+  background: #10b981;
+  color: white;
+}
+
+.main-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 1.5rem;
+  color: #10b981;
+}
+
+.dashboard h2, .environmental h2, .social h2, .governance h2 {
+  color: #065f46;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
+.score-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.score-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  border-left: 4px solid #10b981;
+}
+
+.score-card.overall {
+  border-left-color: #7c3aed;
+}
+
+.score-card.environmental {
+  border-left-color: #059669;
+}
+
+.score-card.social {
+  border-left-color: #2563eb;
+}
+
+.score-card.governance {
+  border-left-color: #dc2626;
+}
+
+.score-card h3 {
+  margin: 0 0 1rem 0;
+  color: #374151;
+  font-size: 1.1rem;
+}
+
+.score {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #10b981;
+  margin: 0.5rem 0;
+}
+
+.score-label {
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+.metric {
+  color: #6b7280;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.compliance-status {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.compliance-badge {
+  background: #dcfce7;
+  color: #166534;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.metric-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #10b981;
+}
+
+.metric-card h3 {
+  margin: 0 0 1rem 0;
+  color: #374151;
+  font-size: 1.2rem;
+}
+
+.metric-card p {
+  margin: 0.5rem 0;
+  color: #6b7280;
+}
+
+.footer {
+  background: #065f46;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+.footer p {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .navigation {
+    flex-wrap: wrap;
+  }
+  
+  .nav-button {
+    flex: 1;
+    min-width: 120px;
+  }
+  
+  .score-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .metrics-grid {
+    grid-template-columns: 1fr;
+  }
+}
